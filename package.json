@@ -50,12 +50,11 @@
         "eslint-plugin-n8n-nodes-base": "^1.16.1",
         "globals": "^15.14.0",
         "prettier": "^3.3.2",
-        "typescript": "^5.5.3",
+        "typescript": "^5.5.4",
         "typescript-eslint": "^8.20.0"
     },
     "dependencies": {
         "n8n-core": "^0.118.0",
-        "n8n-workflow": "^0.110.0",
-        "typescript": "^5.5.4"
+        "n8n-workflow": "^0.110.0"
     }
 }

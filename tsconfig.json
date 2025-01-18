@@ -9,6 +9,11 @@
     "outDir": "./dist",
     "typeRoots": ["./node_modules/@types"]
   },
-  "include": ["nodes/**/*.ts"],
+  "include": [
+    "src/**/*",
+    "credentials/**/*",
+    "nodes/**/*",
+    "package.json"
+  ],
   "exclude": ["node_modules"]
 }
