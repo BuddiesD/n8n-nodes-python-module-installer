@@ -1,6 +1,7 @@
 import { IExecuteFunctions } from 'n8n-core';
-import { INodeExecutionData, INodeProperties, NodeOperationError } from 'n8n-workflow';
+import { INodeExecutionData, NodeOperationError } from 'n8n-workflow';
 import { execSync } from 'child_process';
+
 
 export class N8nNodesPythonModuleInstaller {
     description = {
