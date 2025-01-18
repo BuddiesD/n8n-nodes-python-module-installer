@@ -17,3 +17,6 @@ This is a custom n8n node that allows you to install Python modules globally, ma
 ## License
 
 MIT
+
+
+Little Information: u need a n8n with installed python

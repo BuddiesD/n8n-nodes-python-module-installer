@@ -1,6 +1,6 @@
 {
     "name": "n8n-nodes-python-module-installer",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Eine Node für n8n, um Python-Module zu installieren",
     "keywords": [
         "n8n-community-node-package",
