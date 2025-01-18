@@ -2,11 +2,10 @@ import { IExecuteFunctions } from 'n8n-core';
 import { INodeExecutionData, NodeOperationError } from 'n8n-workflow';
 import { execSync } from 'child_process';
 
-
-export class N8nNodesPythonModuleInstaller {
+export class PythonModuleInstaller {
     description = {
         displayName: 'Python Module Installer',
-        name: 'n8nNodesPythonModuleInstaller',
+        name: 'pythonModuleInstaller',
         group: ['utility'],
         version: 1,
         description: 'Installs Python modules globally in the n8n environment',
@@ -36,7 +35,7 @@ export class N8nNodesPythonModuleInstaller {
             const command = `pip install ${moduleList.join(' ')}`;
             execSync(command, { stdio: 'inherit' });
 
-            return [[{ json: { message: `Installed: ${moduleList.join(', ')}` } }]];
+            return [[{ json: { message: `Installed: ${moduleList.join(', ')}` } }]];  // Return data in the proper format
         } catch (error) {
             const errorMessage = error instanceof Error ? error.message : 'Unknown error';
             throw new NodeOperationError(this.getNode(), `Failed to install modules: ${errorMessage}`);
