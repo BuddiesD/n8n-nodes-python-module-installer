@@ -1,0 +1,58 @@
+{
+    "name": "n8n-nodes-python-module-installer",
+    "version": "1.0.0",
+    "description": "Eine Node für n8n, um Python-Module zu installieren",
+    "keywords": [
+        "n8n-community-node-package",
+        "Python",
+        "Module Installer",
+        "pip"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/BuddiesD/n8n-nodes-python-module-installer",
+    "author": {
+        "name": "J.W",
+        "email": "dev@buddies-dev.de"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/BuddiesD/n8n-nodes-python-module-installer.git"
+    },
+    "engines": {
+        "node": ">=18.10",
+        "pnpm": ">=9.1"
+    },
+    "packageManager": "pnpm@9.1.4",
+    "main": "index.js",
+    "scripts": {
+        "preinstall": "npx only-allow pnpm",
+        "build": "tsc",
+        "dev": "tsc --watch",
+        "format": "prettier --write .",
+        "lint": "eslint .",
+        "lintfix": "eslint . --fix",
+        "prepublishOnly": "pnpm build && pnpm lint"
+    },
+    "files": [
+        "dist"
+    ],
+    "n8n": {
+        "n8nNodesApiVersion": 1,
+        "nodes": [
+            "dist/PythonModuleInstaller.node.js"
+        ]
+    },
+    "devDependencies": {
+        "@types/node": "^22.10.7",
+        "@typescript-eslint/parser": "^7.15.0",
+        "eslint": "^8.57.1",
+        "eslint-plugin-n8n-nodes-base": "^1.16.1",
+        "prettier": "^3.3.2",
+        "typescript": "^5.5.3"
+    },
+    "dependencies": {
+        "n8n-core": "^0.118.0",
+        "n8n-workflow": "^0.110.0",
+        "typescript": "^5.5.4"
+    }
+}
